@@ -1,0 +1,131 @@
+site_name: Broz's Cookbook
+site_url: https://CBroz1.github.io/cookbook/
+site_description: Collection of adapted recipes
+site_author: CBroz1
+
+repo_url: https://github.com/CBroz1/cookbook
+docs_dir: ./src/
+edit_uri: blob/main/docs/src/
+
+theme:
+    name: material
+    palette:
+      - media: "(prefers-color-scheme: light)"
+        scheme: my-default
+        toggle:
+          icon: material/brightness-7
+          name: Switch to dark mode
+      - media: "(prefers-color-scheme: dark)"
+        scheme: slate
+        toggle:
+          icon: material/brightness-4
+          name: Switch to light mode
+    custom_dir: overrides
+    logo: stylesheets/cook_icon.png
+    favicon: stylesheets/cook_icon.png
+    disable_nav_previous_next: true
+    disable_nav_search: false
+    navigation_depth: 2
+    locale: en
+    shortcuts:
+        help:      72 # h # doesn't seem to be working
+        next:      78 # n
+        previous:  80 # p
+        search:    83 # s
+    features:
+      - toc.integrate
+      - navigation.sections
+      - navigation.expand
+      - navigation.top
+      - navigation.instant   # saves loading time - 1 browser page
+      - navigation.tracking  # even with above, changes URL by section
+      - search.suggest
+      - search.share
+
+nav:
+  - Home:                   index.md
+  - Entrees:
+    - Salads:
+      - Beet Salad:  1_Entrees/BeetSalad.md
+      - Fall Rice Kale:  1_Entrees/FallRiceKale.md
+      - Farro Goat Cheese Salad:  1_Entrees/FarroGoatCheese.md
+      - Strawberry Spinach Salad:  1_Entrees/StrawberrySpinach.md
+    - Soups:
+      - Broccoli Cheddar Soup:  1_Entrees/BroccoliCheddarSoup.md
+      - Caulifower Soup:  1_Entrees/CauliflowerSoup.md
+      - Corn Chowder:  1_Entrees/CornChowder.md
+      - Lentil Soup:  1_Entrees/LentilSoup.md
+      - Vegetarian Chili:  1_Entrees/VegetarianChili.md
+    - East Asia:
+      - Coconut Kale Fried Rice:  1_Entrees/CoconutKaleRice.md
+      - Cold Sesame Noodles:  1_Entrees/ColdSesameNoodles.md
+      - Miso Soba Noodles:  1_Entrees/MisoSoba.md
+      - Peanut Noodles:  1_Entrees/PeanutNoodles.md
+      - Spicy Udon:  1_Entrees/Udon.md
+      - Szechuan Eggplant:  1_Entrees/SzechuanEggplant.md
+      - Thai Quinoa Salad:  1_Entrees/ThaiQuinoaSalad.md
+      - Udon:  1_Entrees/Udon.md
+      - Vegan Sushi:  1_Entrees/VeganSushi.md
+    - Central Asia:
+      - Chickpea Pancakes:  1_Entrees/ChickpeaPancakes.md
+      - Coconut Curry Chicken:  1_Entrees/CoconutCurry.md
+      - Felafel:  1_Entrees/Falafel.md
+      - Mujadara:  1_Entrees/Mujadara.md
+      - Shrimp Moqueca:  1_Entrees/ShrimpMoqueca.md
+    - Fried:
+      - Coconut Shrimp: 1_Entrees/CoconutShrimp.md
+      - Latkas: 1_Entrees/Latkas.md
+      - Zucchini Fritters:  1_Entrees/ZucchiniFritters.md
+    - Casserole:
+      - Broccoli Casserole:  1_Entrees/BroccoliQuinoaCassarole.md
+      - Eggplant Cups:  1_Entrees/EggplantCups.md
+      - Jerk Chicken Rice:  1_Entrees/JerkChickenRice.md
+      - Mac & Cheese:  1_Entrees/MacCheese.md
+      - Pot Pie:  1_Entrees/PotPie.md
+      - Potato Leak Soup: 1_Entrees/PotatoLeakSoup.md
+      - Vegetarian Enchiladas:  1_Entrees/VegetarianEnchiladas.md
+    - Italian:
+      - Garlic Alfredo:  1_Entrees/GarlicAlfredo.md
+      - Pizza:  1_Entrees/Pizza.md
+      - Summer Squash Pasta:  1_Entrees/SummerSquashPasta.md
+    - Assembly Required:
+      - Black Bean Burgers:  1_Entrees/BlackBeanBurgers.md
+      - Crunchwraps:  1_Entrees/Crunchwraps.md
+    - Other:
+      - Salmon:  1_Entrees/Salmon.md
+      - Tempeh Bowls:  1_Entrees/TempehBowls.md
+  - Sides:
+    - Brussels:  2_Sides/Brussels.md
+    - Bitchin Sauce:  2_Sides/BitchinDip.md
+    - Cornbread:  2_Sides/Cornbread.md
+    - Baba Ganoush: 2_Sides/BabaGanoush.md
+  - Deserts:
+    - Blueberry Muffins:  3_Desserts/BlueberryMuffins.md
+    - Cherry Cobbler Cake:  3_Desserts/CherryCobblerCake.md
+    - Nutella brownies:  3_Desserts/NutellaBrownies.md
+    - Oreo Pie: 3_Desserts/OreoPie.md
+    - Pumpk Oatmeal Cookies:  3_Desserts/PumpkOatmealCookies.md
+    - S’mores bars:  3_Desserts/SmoresBars.md
+
+extra_css:
+  - stylesheets/extra.css
+
+plugins:
+  - search
+  - exclude:
+      glob:
+        - "temp*"
+  - literate-nav:
+      nav_file: navigation.md
+  - exclude-search:
+      exclude:
+        - "*/navigation.md"
+
+markdown_extensions:
+  - attr_list
+  - tables
+  - toc:
+      permalink: true
+
+extra:
+  generator: false # Disable watermark
